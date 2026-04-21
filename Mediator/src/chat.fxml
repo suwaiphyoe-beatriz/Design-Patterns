@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ChatController"
+      spacing="10"
+      prefWidth="400"
+      prefHeight="320">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <TextArea fx:id="chatArea"
+              editable="false"
+              wrapText="true"
+              prefHeight="200"/>
+
+    <ComboBox fx:id="recipientBox"
+              promptText="Select recipient"
+              maxWidth="Infinity"/>
+
+    <TextField fx:id="messageField"
+               promptText="Type a message..."/>
+
+    <Button text="Send"
+            onAction="#sendButtonClicked"
+            maxWidth="Infinity"/>
+</VBox>
